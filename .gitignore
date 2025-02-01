@@ -242,6 +242,10 @@ $RECYCLE.BIN/
 */build/*
 
 # End of https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
-
+.terraform
 .aws-sam
 samconfig.toml
+terraform.tfstate
+terraform.tfstate.backup  
+terraform.tfvars
+.terraform.lock.hcl
