@@ -75,8 +75,7 @@ Use o comando abaixo para se conectar à instância EC2. Substitua `<instance-id
 aws ec2-instance-connect ssh --instance-id <instance-id>
 ```
 
-Para mais informações, consulte a documentação oficial: Conectar usando EC2 Instance Connect.
-
+Para mais informações, consulte a [Documentação.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html)
 ### 2. Criar e Subir um Arquivo no Bucket S3
 Dentro da instância EC2, crie um arquivo de texto simples:
 
