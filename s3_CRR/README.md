@@ -5,3 +5,7 @@ Este é um projeto simples para demonstrar como configurar a **replicação entr
 Abaixo está uma ilustração do projeto:
 
 ![Diagrama do Projeto](./s3_crr.png) 
+
+## Notas que aprendi com o projeto:
+ - é possivel fazer a replicação a partir de tags especificas ou prefixos dos objetos ou ambos juntos configurando as rules
+ - é possivel configurar o terraform para usar 2 providers diferentes no mesmo projeto, no caso de criar o bucket em 2 regiões diferentes
