@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  lambda-with-containers
+
+  Sample SAM Template for lambda_with_containers
+
+Globals:
+  Function:
+    Timeout: 60 
+    LoggingConfig:
+      LogFormat: JSON
+
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Metadata:  # <- a partir disso é possivel criar um repositorio ecr para dar push na imagem docker criado com sam build automaticamente
+      DockerTag: latest
+      DockerContext: ./hello_world
+      Dockerfile: Dockerfile
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      ImageConfig:
+        Command: ["app.lambda_handler"]
+      MemorySize: 512
+      Timeout: 60
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
+Outputs:
+  HelloWorldApi:
+    Description: API Gateway endpoint URL para a função HelloWorld
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+  HelloWorldFunction:
+    Description: ARN da função Lambda HelloWorld
+    Value: !GetAtt HelloWorldFunction.Arn
