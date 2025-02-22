@@ -1,6 +1,6 @@
 # Prova de Conceito: AWS Lambda com Contêineres
 
-Este projeto serve como uma prova de conceito para explorar a utilização e implementação de funções AWS Lambda com contêineres Docker. O objetivo principal é compreender o funcionamento da execução de funções Lambda em contêineres personalizados, com ênfase em um projeto futuro que pretendo desenvolver, uma vez que as limitações de tamanho das funções Lambda nativas representam um obstáculo para a implementação.
+Este projeto serve como uma prova de conceito para explorar a utilização e implementação de funções AWS Lambda com contêineres Docker. O objetivo principal é compreender o funcionamento da execução de funções Lambda em contêineres personalizados, com ênfase em um [projeto](https://github.com/fabioalmeida08/ConcursoWatcherAWS) que pretendo desenvolver, uma vez que as limitações de tamanho das funções Lambda nativas representam um obstáculo para a implementação.
 
 ## Fluxo da aplicação
 ![Fluxo do Projeto](./lambda_with_container.png) 
